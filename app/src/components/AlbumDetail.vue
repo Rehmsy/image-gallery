@@ -1,22 +1,23 @@
 <template>
-  <div>
-    <h2>Album detail</h2>
  
-    <!-- <nav>
-        <router-link :to="`/albums/${album.id}/list`">list</router-link>
-        &nbsp;
-        <router-link :to="`/albums/${album.id}/thumbnail`">thumbnail</router-link>
-        &nbsp;
-        <router-link :to="`/albums/${album.id}/new`">add a new image</router-link>
-        &nbsp;
-        <router-link :to="`/albums/${album.id}/gallery`">gallery</router-link>
-      
-    </nav> -->
+  <div v-if="album !== null">
+    <h2>Album detail hi</h2>
+    <h3>{{ album.title }}</h3>
+ 
+    <nav>
+      <router-link :to="`/albums/${album.id}/thumbnail`">ThumbNailViewer</router-link> 
+      &nbsp;
+      <router-link :to="`/albums/${album.id}/list`">list</router-link>
+      &nbsp;
+      <router-link :to="`/albums/${album.id}/new`">add a new image</router-link>
+      &nbsp;
+      <router-link :to="`/albums/${album.id}/gallery`">gallery</router-link>
+      </nav>
 
-    <!-- <router-view 
+    <router-view 
       :images="album.images"
       :albumId="album.id"
-    ></router-view> -->
+    ></router-view> 
   
   </div>
 </template>

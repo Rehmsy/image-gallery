@@ -2,7 +2,8 @@
   <div>
     <h2>This is the Album page yo</h2>
     <ul v-if="albums">
-      <li v-for="album in albums"
+      <li 
+        v-for="album in albums"
         :key="album.id"
         >
         <router-link :to="`/albums/${album.id}`">
